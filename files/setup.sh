@@ -48,7 +48,7 @@ sudo  chef-server-ctl reconfigure
   until (curl -D - http://localhost:8000/_status) | grep "200 OK"; do sleep 15s; done
   while (curl http://localhost:8000/_status) | grep "fail"; do sleep 15s; done
 
-  echo "Installing and Configuring Chef Management Console!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1111"
+  echo "Installing and Configuring Chef Management Console!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
   sudo chef-server-ctl install chef-manage
   sudo chef-server-ctl reconfigure
   sudo chef-manage-ctl reconfigure --accept-license
