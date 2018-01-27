@@ -55,7 +55,7 @@ resource "aws_instance" "web" {
   }
   
   provisioner "local-exec" {
-    command        = "scp -oStrictHostKeyChecking=no -i /home/terraform/.ssh/ec2_rsa ubuntu@${aws_instance.web.public_dns}:/drop/* /home/terraform/chef_client/files/"
+    command        = "scp -oStrictHostKeyChecking=no -i /home/terraform/.ssh/ec2_rsa ubuntu@${aws_instance.web.public_dns}:/drop/* ${path.module}/chef_client/files/"
   }
    
 

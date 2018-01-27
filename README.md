@@ -10,6 +10,8 @@ Currently the code spins up only ubuntu 14.04 instances on AWS
 Usage
 =====
 
+terrform init
+Copy your AWS access key and rename it to mykey.pem
 terrform apply 
 
 Testing
